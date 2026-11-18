@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chromelite Technologies Limited | Pricing</title>
+    <!-- Shared screen layout is provided by the external stylesheet. -->
+    <link rel="stylesheet" href="chromelite.css">
+
+    <!-- The assignment requires internal CSS for printing this page. -->
+    <style>
+        @media print {
+            /* Hide navigation, headings, footer and every other page element. */
+            body * {
+                visibility: hidden;
+            }
+
+            /* Make only the pricing table and its contents visible in print. */
+            .pricing-table,
+            .pricing-table * {
+                visibility: visible;
+            }
+
+            /* Position the table at the top-left of the printed page. */
+            .pricing-table {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                border-collapse: collapse;
+                border: 1px solid #000;
+                font-size: 10pt;
+            }
+
+            /* Ensure every table cell has a visible full border when printed. */
+            .pricing-table th,
+            .pricing-table td {
+                border: 1px solid #000 !important;
+                padding: 8px;
+                color: #000 !important;
+                background: #fff !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- The pricing page uses the same header and navigation as the home page. -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo-link" href="index.html">
+                <img src="chromelite-logo.png" alt="Chromelite Technologies Limited logo" style="width: 180px;">
+            </a>
+
+            <nav class="navbar" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a class="active" href="pricing.html">Pricing</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pricing-main">
+        <section class="pricing-intro">
+            <p class="eyebrow">Chromelite Technologies Limited</p>
+            <h1>Product Pricing Schedule</h1>
+            <p>Naalya, Kampala | All prices are in Uganda Shillings (UGX).</p>
+            <p class="sample-notice">Demonstration schedule: product prices and quantities below are sample figures for this assignment, not an official company quotation.</p>
+        </section>
+
+        <!-- The table groups nine products into three categories using rowspan. -->
+        <div class="table-wrapper">
+            <table class="pricing-table">
+                <caption>Sample Product Pricing Schedule</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Item No.</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Product Description</th>
+                        <th scope="col">Unit Price (UGX)</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col">Total (UGX)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Branded Stationery: one category cell spans its three products. -->
+                    <tr>
+                        <td>01</td>
+                        <td rowspan="3" class="category-cell">Branded Stationery</td>
+                        <td>Custom Business Cards (pack)</td>
+                        <td class="numeric">45,000</td>
+                        <td class="numeric">5</td>
+                        <td class="numeric">225,000</td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>Branded Letterheads (ream)</td>
+                        <td class="numeric">35,000</td>
+                        <td class="numeric">4</td>
+                        <td class="numeric">140,000</td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td>Branded Notebooks (piece)</td>
+                        <td class="numeric">12,000</td>
+                        <td class="numeric">20</td>
+                        <td class="numeric">240,000</td>
+                    </tr>
+
+                    <!-- Event Materials: one category cell spans its three products. -->
+                    <tr>
+                        <td>04</td>
+                        <td rowspan="3" class="category-cell">Event Materials</td>
+                        <td>Pull-up Banner</td>
+                        <td class="numeric">180,000</td>
+                        <td class="numeric">2</td>
+                        <td class="numeric">360,000</td>
+                    </tr>
+                    <tr>
+                        <td>05</td>
+                        <td>Printed Event Backdrop</td>
+                        <td class="numeric">450,000</td>
+                        <td class="numeric">1</td>
+                        <td class="numeric">450,000</td>
+                    </tr>
+                    <tr>
+                        <td>06</td>
+                        <td>Branded Event Badges</td>
+                        <td class="numeric">3,000</td>
+                        <td class="numeric">100</td>
+                        <td class="numeric">300,000</td>
+                    </tr>
+
+                    <!-- Branded Apparel: one category cell spans its three products. -->
+                    <tr>
+                        <td>07</td>
+                        <td rowspan="3" class="category-cell">Branded Apparel</td>
+                        <td>Branded Polo Shirts</td>
+                        <td class="numeric">35,000</td>
+                        <td class="numeric">30</td>
+                        <td class="numeric">1,050,000</td>
+                    </tr>
+                    <tr>
+                        <td>08</td>
+                        <td>Branded Caps</td>
+                        <td class="numeric">18,000</td>
+                        <td class="numeric">25</td>
+                        <td class="numeric">450,000</td>
+                    </tr>
+                    <tr>
+                        <td>09</td>
+                        <td>Branded Jackets</td>
+                        <td class="numeric">85,000</td>
+                        <td class="numeric">10</td>
+                        <td class="numeric">850,000</td>
+                    </tr>
+                </tbody>
+
+                <!-- colspan="5" makes each summary label span the first five columns. -->
+                <tfoot>
+                    <tr>
+                        <th colspan="5" scope="row">Subtotal</th>
+                        <td class="numeric">4,065,000</td>
+                    </tr>
+                    <tr>
+                        <th colspan="5" scope="row">VAT @ 18%</th>
+                        <td class="numeric">731,700</td>
+                    </tr>
+                    <tr class="grand-total">
+                        <th colspan="5" scope="row">Grand Total</th>
+                        <td class="numeric">4,796,700</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </main>
+
+    <!-- Company contact details appear on screen; the print rule hides this footer. -->
+    <footer class="site-footer">
+        <h2>Chromelite Technologies Limited</h2>
+        <p>Grand City Complex, Naalya, Kampala</p>
+        <!-- Replace these sample contact placeholders with verified company details. -->
+        <p>Phone: +256 XXX XXX XXX | Email: info@example.com</p>
+        <p class="copyright">&copy; 2026 Chromelite Technologies Limited. All rights reserved.</p>
+    </footer>
+</body>
+</html>
